@@ -1,0 +1,194 @@
+:root {
+  --bg: #ffffff;
+  --text: #111827;
+  --primary: #2563eb;
+  --surface: #f9fafb;
+  --border: #e5e7eb;
+}
+
+.dark {
+  --bg: #111827;
+  --text: #f9fafb;
+  --primary: #3b82f6;
+  --surface: #1f2937;
+  --border: #374151;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+img {
+  border-radius: 50%;
+}
+
+h1, h2, h3 {
+  color: var(--primary);
+}
+
+ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.75rem;
+}
+
+th {
+  background: var(--surface);
+}
+
+tr:nth-child(even) {
+  background: rgba(37, 99, 235, 0.05);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Button */
+.button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.button:hover {
+  background: #1d4ed8;
+}
+
+/* Banner */
+.banner {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  margin: 1rem auto 0;
+  max-height: 360px;
+}
+
+.banner img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  object-position: 50% 40%;
+}
+
+/* Contact form */
+.contact-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  max-width: 560px;
+  margin: 0.5rem 0;
+}
+
+.field {
+  margin-bottom: 0.9rem;
+}
+
+.field label {
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--text);
+  outline: none;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border);
+}
+/* =============================
+   ✨ Subtle animation effects
+   ============================= */
+
+/* 1️⃣ Fade-in for all sections when loaded */
+section {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* small delay between sections */
+section:nth-child(odd) {
+  animation-delay: 0.1s;
+}
+section:nth-child(even) {
+  animation-delay: 0.25s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 2️⃣ Hover grow for project links & buttons */
+a:hover,
+.button:hover {
+  transform: scale(1.03);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+/* 3️⃣ Soft glow on profile photo */
+header figure img {
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+header figure img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.25);
+}
