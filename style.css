@@ -192,3 +192,68 @@ header figure img:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px rgba(37, 99, 235, 0.25);
 }
+/* =============================
+   Intro Section
+   ============================= */
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 1rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.intro-text {
+  max-width: 500px;
+  text-align: left;
+}
+
+.intro-text h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.intro-text .highlight {
+  color: var(--primary);
+}
+
+.intro-text p {
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.intro-photo img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--primary);
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.intro-photo img:hover {
+  transform: scale(1.05);
+}
+.banner img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.intro-photo img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--primary);
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.25);
+}
