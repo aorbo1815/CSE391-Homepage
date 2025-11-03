@@ -257,3 +257,42 @@ header figure img:hover {
   border: 4px solid var(--primary);
   box-shadow: 0 0 20px rgba(37, 99, 235, 0.25);
 }
+/* --- JS Projects section (scoped) --- */
+.js-projects { padding: 1rem; margin-top: 1rem; }
+.js-projects h2 { margin: 0.25rem 0 0.5rem; }
+.js-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.js-projects .card {
+  background: #fff;
+  border: 2px solid #e5e7eb;       /* light border */
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 8px 22px rgba(0,0,0,.06);
+  transition: transform .25s, box-shadow .25s;
+}
+.js-projects .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.10);
+}
+.js-projects .card h3 { margin: 0 0 .35rem; }
+.js-projects .card p { margin: 0 0 .75rem; color: #475569; }
+
+.js-projects .actions { display: flex; gap: .5rem; flex-wrap: wrap; }
+
+/* reuse your .button if it exists; otherwise: */
+.button {
+  display: inline-block; text-decoration: none;
+  background: #2563eb; color: #fff; padding: .55rem .9rem;
+  border-radius: 10px; transition: background .2s;
+}
+.button:hover { background: #1d4ed8; }
+
+.ghost {
+  display: inline-block; text-decoration: none;
+  background: #fff; color: #1f2937; padding: .55rem .9rem;
+  border-radius: 10px; border: 2px solid #e5e7eb;
+}
+.ghost:hover { background: #f8fafc; }
